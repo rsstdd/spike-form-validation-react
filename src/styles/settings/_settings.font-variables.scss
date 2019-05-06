@@ -1,0 +1,19 @@
+// Font Stack
+// sass-lint:disable no-important
+$font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+$h5-size: 2rem;
+$p-size: 1.8rem;
+$form-p: $p-size - .5rem;
+
+// navbar
+$nav-font-size: 16px;
+
+$footer-font-size: 1.8rem;
+
+// defaults
+$default-font-size: 1.8rem;
+$default-font-weight: 400;
+$default-letter-spacing: .1px;
+$default-line-height: 1.45;
+$default-word-spacing: normal;
+$default-p-margin-bottom: 1.3em;

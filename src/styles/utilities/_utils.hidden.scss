@@ -1,0 +1,5 @@
+.u-hide-md {
+  @media(max-width: 992px) { // same width that map changes orientation on city
+    display: none;
+  }
+}

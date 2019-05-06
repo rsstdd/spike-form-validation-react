@@ -1,0 +1,9 @@
+// sass-lint:disable no-ids
+#___gatsby {
+  min-width: 100% !important;
+}
+
+// sass-lint:disable no-important
+#___gatsby > [data-reactroot] {
+  min-width: 100% !important;
+}

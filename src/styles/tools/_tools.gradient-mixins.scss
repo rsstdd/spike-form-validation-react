@@ -1,0 +1,55 @@
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+// sass-lint:disable no-vendor-prefixes
+// sass-lint:disable property-sort-order
+// sass-lint:disable no-duplicate-properties
+@mixin gradient($btn-width, $btn-height, $btn-color, $text-color, $margin, $font-size, $width, $style, $color) {
+  width: $btn-width;
+  height: $btn-height;
+  background: $btn-color;
+  color: $text-color;
+  margin: $margin;
+  font-size: $font-size;
+
+  border-radius: .4rem;
+  border: 0;
+  font-weight: 600;
+  letter-spacing: .06em;
+
+  border: {
+    width: $width;
+    style: $style;
+    color: $color;
+  }
+
+  background: -moz-linear-gradient(top, lighten($btn-color, 20%) 0%, darken($btn-color, 10%) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, lighten($btn-color, 20%)), color-stop(100%, darken($btn-color, 10%)));
+  background: -webkit-linear-gradient(top, lighten($btn-color, 20%) 0%, darken($btn-color, 10%) 100%);
+  background: -o-linear-gradient(top, lighten($btn-color, 20%) 0%, darken($btn-color, 10%) 100%);
+  background: -ms-linear-gradient(top, lighten($btn-color, 20%) 0%, darken($btn-color, 10%) 100%);
+  background: linear-gradient(to bottom, lighten($btn-color, 20%) 0%, darken($btn-color, 10%) 100%);
+
+  @content;
+}

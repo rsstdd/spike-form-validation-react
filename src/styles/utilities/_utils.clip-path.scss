@@ -1,0 +1,43 @@
+// Clip Path
+// utils.clip-path
+// -----------
+
+.u-clip-2 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+@include respond(phone) {
+  .u-clip-1 {
+    -webkit-clip-path: polygon(0 6%, 100% 0, 100% 93%, 0% 100%);
+    clip-path: polygon(0 6%, 100% 0, 100% 93%, 0% 100%);
+  }
+
+  .u-clip-2 {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+}
+
+
+@include respond(tab-port) {
+  .u-clip-1 {
+    -webkit-clip-path: polygon(0 6%, 100% 0, 100% 93%, 0% 100%);
+    clip-path: polygon(0 6%, 100% 0, 100% 93%, 0% 100%);
+  }
+
+}
+
+@include respond(tab-land) {
+  .u-clip-1 {
+    -webkit-clip-path: polygon(0 6%, 100% 0, 100% 93%, 0% 100%);
+    clip-path: polygon(0 8%, 100% 0, 100% 93%, 0% 100%);
+  }
+}
+
+@include respond(big-desktop) {
+  .u-clip-1 {
+    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 93%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 93%, 0% 100%);
+  }
+}

@@ -1,0 +1,23 @@
+// sass-lint:disable property-sort-order
+@mixin input($font-size, $border-width, $height, $width, $margin) {
+  font-size: $font-size;
+  border-width: $border-width;
+  height: $height;
+  width: $width;
+  margin: $margin;
+
+  @content;
+}
+
+// sass-lint:disable property-sort-order no-vendor-prefixes
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@include placeholder {
+  color: #333;
+  letter-spacing: 1.4px;
+}

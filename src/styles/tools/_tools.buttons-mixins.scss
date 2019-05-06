@@ -1,0 +1,14 @@
+// sass-lint:disable property-sort-order
+@mixin button($width, $height, $background, $color, $margin, $font-size) {
+  width: $width;
+  height: $height;
+  background: $background;
+  color: $color;
+  margin: $margin;
+  font-size: $font-size;
+
+  border: 0;
+  text-transform: uppercase;
+
+  @content;
+}

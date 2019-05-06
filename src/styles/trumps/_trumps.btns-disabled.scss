@@ -1,0 +1,10 @@
+// sass-lint:disable no-important
+// sass-lint:disable no-qualifying-elements
+input:disabled,
+input[type='submit']:disabled,
+button:disabled {
+  cursor: not-allowed !important;
+  filter: alpha(opacity=70);
+  opacity: .7;
+  pointer-events: all !important;
+}

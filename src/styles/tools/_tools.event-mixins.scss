@@ -1,0 +1,42 @@
+// sass-lint:disable property-sort-order
+@mixin on-event($color, $text-decoration: none) {
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color;
+    text-decoration: $text-decoration;
+    cursor: pointer;
+
+    @content;
+  }
+}
+
+@mixin background($background) {
+  &:hover,
+  &:active,
+  &:focus {
+    background: $background;
+
+    @content;
+  }
+}
+
+@mixin remove-form-field-glow($box-shadow, $border) {
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    box-shadow: $box-shadow;
+    border: $border;
+
+    @content;
+  }
+}
+
+@mixin remove-focus($outline) {
+  &:focus {
+    outline: $outline;
+
+    @content;
+  }
+}
