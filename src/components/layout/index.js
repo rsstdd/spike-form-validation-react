@@ -1,9 +1,9 @@
-import React, { fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../header'
-import '../../styles/main.scss'
+// import '../../styles/main.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,16 +17,12 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <fragment>
+      <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main className="main-body">{children}</main>
-          <footer>
-            © {new Date().getFullYear()}
-            {` `}
-          </footer>
         </div>
-      </fragment>
+      </>
     )}
   />
 )
