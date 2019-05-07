@@ -2,11 +2,13 @@ import React from 'react'
 
 import useForm from '../../hooks/use-form'
 import validate from './validations/email-validation'
+import validateAsyncServer from './validations/email-validation-server'
 
 const Form = () => {
   const { errors, values, handleChange, handleSubmit } = useForm(
     submit,
-    validate
+    validate,
+    validateAsyncServer
   )
 
   function submit() {
