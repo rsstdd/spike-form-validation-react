@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react'
 
-const useForm = (submit, validate, validateAsyncServer) => {
+const useForm = (submit, validate) => {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  // let [validating, setValidating] = useState(false)
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
-      setErrors(validateAsyncServer(values))
-
-      // submit()
+      submit()
     }
   }, [errors]) // Only re-run the effect if errors changes
 
