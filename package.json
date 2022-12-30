@@ -12,7 +12,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "bulma": "^0.7.4",
     "eslint-config-airbnb": "^17.1.0",
-    "gatsby": "^2.1.23",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.0.31",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-offline": "^2.0.24",
